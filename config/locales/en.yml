@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  errors:
+    company:
+      email:
+        domain: 'should only be a @getmainstreet.com domain'
+

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Companies Controller
 class CompaniesController < ApplicationController
   before_action :set_company, except: [:index, :create, :new]
 
@@ -32,17 +35,19 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    if @company.destroy
+      redirect_to companies_path
+    else
+      redirect_to companies_path, flash: { error: errors(@company) }
+    end
+  end
+
   private
     def company_params
       params.require(:company).permit(
-        :name,
-        :legal_name,
-        :description,
-        :zip_code,
-        :phone,
-        :email,
-        :owner_id,
-        services: []
+        :name, :legal_name, :description, :zip_code, :phone, :email, :owner_id,
+        :company_color, services: []
       )
     end
 

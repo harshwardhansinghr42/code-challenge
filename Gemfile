@@ -14,7 +14,8 @@ gem "jbuilder",   "2.11.2"
 gem "bootsnap",   "1.6.0", require: false
 
 gem "zip-codes", "0.2.1"
-
+gem 'simple_form'
+gem 'rails-observers'
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]

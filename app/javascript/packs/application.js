@@ -7,9 +7,11 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
+require("packs/company")
 
 import "css/site";
-
+import "css/company";
+import "css/style";
 import "bootstrap";
 
 require("trix");
